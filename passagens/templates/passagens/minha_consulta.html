@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- CSS only -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-   <!-- JavaScript Bundle with Popper -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   
-   {{ form.media }}
+{% extends 'base.html' %}
 
-   <title>Forms</title>
-</head>
-<body>
+{% block content %}
    <section class="container mt-2">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <a href="{% url 'index' %}" class="navbar-brand">Passagem</a>
@@ -24,6 +10,9 @@
       <p>Destino: {{form.destino.value}}</p>
       <p>Data ida: {{form.data_ida.value}}</p>
       <p>Data volta: {{form.data_volta.value}}</p>
+      <p>Data da pesquisa: {{form.data_pesquisa.value}}</p>
+      <p>Classe: {{form.classe_viagem.value}}</p>
+      <p>Informações: {{form.informacoes.value}}</p>
+      <p>Email: {{form.email.value}}</p>
    </section>
-</body>
-</html>
+{% endblock %}
